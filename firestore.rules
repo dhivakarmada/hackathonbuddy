@@ -1,0 +1,28 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Registrations
+    match /registrations/{id} {
+      allow read: if request.auth != null;
+      allow write: if false; // Only Cloud Functions can write
+    }
+
+    // Events
+    match /events/{id} {
+      allow read: if true; // Public for participants
+      allow write: if request.auth != null; // Admin check can be added here
+    }
+
+    // Users
+    match /users/{id} {
+      allow read, write: if request.auth != null && request.auth.uid == id;
+    }
+    
+    // Checkins
+    match /checkins/{id} {
+      allow read: if request.auth != null;
+      allow write: if false; // Only Cloud Functions can write
+    }
+  }
+}
