@@ -15,7 +15,7 @@
 
 ## ✨ Overview
 
-Hackathonbuddy is a comprehensive event management solution designed to handle the complexities of modern hackathons. From high-conversion marketing pages to real-time scanning for volunteers, this ecosystem provides a seamless experience for organizers, participants, and admins alike.
+Hackathonbuddy is a full-stack event CRM and management ecosystem designed to handle the complexities of modern hackathons. From high-conversion marketing pages to real-time QR scanning for volunteers, this platform provides a seamless end-to-end experience for organizers, participants, and admins.
 
 <div align="center">
   <img src="public/brand/dashboard.png" alt="Dashboard Mockup" width="100%" />
